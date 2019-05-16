@@ -46,8 +46,6 @@
 - 更新回数が増えるため、計算時間が長くなる
 - 局所的最小解にトラップされてしまうリスクを低減できる
 
-### Growp Work : ミニバッチ学習時のバッチサイズの決め方
-
 ## 微分
 
 - 数値微分
@@ -83,6 +81,16 @@
     - 最も急な方向に下る方法が「最急降下法」
     - 無作為に選び出したデータに対して勾配降下法を行うのが「確率的勾配降下法」
       - NNの学習ではこの確率的勾配降下法を使うのが普通
+      
+勾配法の数式は以下の通り。　※変数が2つの場合
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=$$&space;x_0&space;=&space;x_0&space;-&space;\eta\frac{df}{dx_0}&space;$$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?$$&space;x_0&space;=&space;x_0&space;-&space;\eta\frac{df}{dx_0}&space;$$" title="$$ x_0 = x_0 - \eta\frac{df}{dx_0} $$" /></a>
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=$$&space;x_1&space;=&space;x_1&space;-&space;\eta\frac{df}{dx_1}&space;\etaは更新量を表す&space;$$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?$$&space;x_1&space;=&space;x_1&space;-&space;\eta\frac{df}{dx_1}&space;\etaは更新量を表す&space;$$" title="$$ x_1 = x_1 - \eta\frac{df}{dx_1} $$" /></a>
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=$$&space;\eta&space;$$" target="_blank"><img src="https://latex.codecogs.com/gif.latex?$$&space;\eta&space;$$" title="$$ \eta $$" /></a>　は学習率を表している。
+
+ニューラルネットワークのパラメータ（重みやバイアス）は学習によって自動で獲得されるパラメータであるが、学習率は人の手によって設定されるパラメータなのでハイバーパラメータとよばれる。
 
 ## 誤差逆伝播法
 
